@@ -26,7 +26,8 @@ document.querySelectorAll(".card").forEach((card) => {
     // Fullscreen player
     card.addEventListener("click", () => {
 
-        player.src = card.dataset.video;
+       const videoSrc = preview.querySelector("source").src;
+        player.src = videoSrc;
 
         modal.style.display = "flex";
 
